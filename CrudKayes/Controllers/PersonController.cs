@@ -33,6 +33,7 @@ namespace CrudKayes.Controllers
 			// 10 seconds er majhe request asle if block thekei result return korbe r 10seconds over hoye gele abar database theke data niye asbe 
 			// 10 seconds er vitor request pathale cache theke data dekhabe
 
+
 			return View(DataSet);
 		}
 
