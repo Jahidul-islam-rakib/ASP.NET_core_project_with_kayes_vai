@@ -1,0 +1,66 @@
+﻿@model CrudKayes.Models.Person
+@{
+    ViewData["Title"] = "Person";
+}
+
+<div class="card">
+    <p class="card-title">Person Information</p>
+    <p>@ViewData["ErrorMessage"]</p>
+    <form method="post" asp-action="AddOrEdit">
+        <div class="card-body">
+            <div class="row">
+               <div class="col-md-2">
+                    <label asp-for="Id">Id</label>
+                    <input asp-for="Id" class="form-control" placeholder="Id" />
+                    <span asp-validation-for="Id" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter Person Name" />
+                    <span asp-validation-for="Name" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Gender">Gender</label>
+                    <input asp-for="Gender" class="form-control" placeholder="Enter Gender" />
+                    <span asp-validation-for="Gender" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Height">Height</label>
+                    <input asp-for="Height" class="form-control" placeholder="Enter Height" />
+                    <span asp-validation-for="Height" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Weight">Weight</label>
+                    <input asp-for="Weight" class="form-control" placeholder="Enter Weight" />
+                    <span asp-validation-for="Weight" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="DOB">Date of Birth</label>
+                    <input asp-for="DOB" class="form-control" placeholder="Enter DOB" />
+                    <span asp-validation-for="DOB" class="alert-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label asp-for="HairColor">Hair Color</label>
+                    <input asp-for="HairColor" class="form-control" placeholder="Enter Hair Color" />
+                    <span asp-validation-for="HairColor" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="PresentAddress">Present Address</label>
+                    <input asp-for="PresentAddress" class="form-control" placeholder="Enter Present Address" />
+                    <span asp-validation-for="PresentAddress" class="alert-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="PermanentAddress">Permanent Address</label>
+                    <input asp-for="PermanentAddress" class="form-control" placeholder="Enter Permanent Address" />
+                    <span asp-validation-for="PermanentAddress" class="alert-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" asp-area="" asp-controller="Person" asp-action="Index">Back to List</a>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
