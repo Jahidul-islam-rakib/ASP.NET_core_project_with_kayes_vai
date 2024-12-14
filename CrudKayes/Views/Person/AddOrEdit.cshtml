@@ -7,13 +7,15 @@
     <p class="card-title">Person Information</p>
     <p>@ViewData["ErrorMessage"]</p>
     <form method="post" asp-action="AddOrEdit">
+        <input type="hidden" asp-for="RowVersion" /> 
+        <input type="hidden" asp-for="Id" />
         <div class="card-body">
             <div class="row">
-               <div class="col-md-2">
+               @* <div class="col-md-2">
                     <label asp-for="Id">Id</label>
                     <input asp-for="Id" class="form-control" placeholder="Id" />
                     <span asp-validation-for="Id" class="alert-danger"></span>
-                </div>
+                </div> *@
                 <div class="col-md-2">
                     <label asp-for="Name"></label>
                     <input asp-for="Name" class="form-control" placeholder="Enter Person Name" />
